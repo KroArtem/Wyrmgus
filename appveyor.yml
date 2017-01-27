@@ -17,6 +17,8 @@ before_build:
   - dir
   - cd ..
   - dir
+build:
+  project: stratagus.sln
 after_build:
   - 7z a compiled-binaries.zip %cd%\build\stratagus.exe %cd%\build\dependencies\bin\*.dll
 artifacts:
