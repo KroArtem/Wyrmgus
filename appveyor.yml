@@ -14,6 +14,7 @@ before_build:
   - appveyor DownloadFile https://github.com/jimpark/unsis/releases/download/2.50.0/nsis-2.50.0-Unicode-setup.exe
   - nsis-2.50.0-Unicode-setup.exe /S /D=C:\Program Files (x86)\NSIS
   - cmake -G "Visual Studio 14 2015" -DCMAKE_PREFIX_PATH="%cd%\\dependencies" -DENABLE_NSIS=ON -DENABLE_STDIO_REDIRECT=ON ..
+  - dir
   - cd ..
   - dir
 after_build:
